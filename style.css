@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Poppins:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(246, 180, 180);
+  font-family: noto sans;
+}
+
+.bg_heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height:100vh;
+  overflow: hidden
+}
+
+.name {
+  font-size: 100px;
+  font-weight: bold;
+  color: crimson;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-shadow: 0 0 10px rgb(246, 54, 92);
+}
+
+.heart {
+    position: absolute;
+    top: -50%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -m-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transition: 0.2s linear;
+}
+
+.heart:before {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.heart:after {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.next_button {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  width: 150px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  background: rgb(221, 131, 131);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 15px crimson;
+  z-index: 999;
+}
+
+@keyframes nameAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes love {
+  0%{top:110%}
+}
+@-moz-keyframes love {
+  0%{top:110%}
+}
+@-ms-keyframes love {
+  0%{top:110%}
+}
+@keyframes love {
+  0%{top:110%}
+}
